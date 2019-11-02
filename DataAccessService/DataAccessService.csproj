@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A880FB5-F5F8-4050-8374-C2F0366E9A3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DataAccessService</RootNamespace>
+    <AssemblyName>DataAccessService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.7.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsultorioDataAccessService.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaByIdInput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaByIdOutput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaByIdResult.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaByPacienteIdInput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaByPacienteIdOutput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaByPacienteIdResult.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaDeleteInput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaDeleteOutput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaInsertInput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaInsertOutput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaUpdateInput.cs" />
+    <Compile Include="Consultorio\Models\ContactoEmergenciaUpdateOutput.cs" />
+    <Compile Include="Consultorio\Models\GetAllObraSocialOutput.cs" />
+    <Compile Include="Consultorio\Models\GetAllObraSocialResult.cs" />
+    <Compile Include="Consultorio\Models\GetObraSocialCompleteInput.cs" />
+    <Compile Include="Consultorio\Models\GetObraSocialCompleteOutput.cs" />
+    <Compile Include="Consultorio\Models\GetObraSocialCompleteResult.cs" />
+    <Compile Include="Consultorio\Models\GetObraSocialInput.cs" />
+    <Compile Include="Consultorio\Models\GetObraSocialOutput.cs" />
+    <Compile Include="Consultorio\Models\GetObraSocialResult.cs" />
+    <Compile Include="Consultorio\Models\ModelBase.cs" />
+    <Compile Include="Consultorio\Models\PacienteDeleteInput.cs" />
+    <Compile Include="Consultorio\Models\PacienteDeleteOutput.cs" />
+    <Compile Include="Consultorio\Models\PacienteInsertInput.cs" />
+    <Compile Include="Consultorio\Models\PacienteInsertOutput.cs" />
+    <Compile Include="Consultorio\Models\PacienteQueryOutput.cs" />
+    <Compile Include="Consultorio\Models\PacienteQueryResult.cs" />
+    <Compile Include="Consultorio\Models\PacienteUpdateInput.cs" />
+    <Compile Include="Consultorio\Models\PacienteUpdateOutput.cs" />
+    <Compile Include="Consultorio\Models\SearchPacienteInput.cs" />
+    <Compile Include="Consultorio\Models\SearchPacienteOutput.cs" />
+    <Compile Include="Consultorio\Models\SearchPacienteResult.cs" />
+    <Compile Include="Consultorio\Services\ContactoEmergenciaById.cs" />
+    <Compile Include="Consultorio\Services\ContactoEmergenciaByPacienteId.cs" />
+    <Compile Include="Consultorio\Services\ContactoEmergenciaDelete.cs" />
+    <Compile Include="Consultorio\Services\ContactoEmergenciaInsert.cs" />
+    <Compile Include="Consultorio\Services\ContactoEmergenciaUpdate.cs" />
+    <Compile Include="Consultorio\Services\GetAllObraSocial.cs" />
+    <Compile Include="Consultorio\Services\GetObraSocial.cs" />
+    <Compile Include="Consultorio\Services\GetObraSocialComplete.cs" />
+    <Compile Include="Consultorio\Services\PacienteDelete.cs" />
+    <Compile Include="Consultorio\Services\PacienteInsert.cs" />
+    <Compile Include="Consultorio\Services\PacienteQuery.cs" />
+    <Compile Include="Consultorio\Services\PacienteUpdate.cs" />
+    <Compile Include="Consultorio\Services\SearchPaciente.cs" />
+    <Compile Include="Consultorio\Services\ServiceBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SqlPlus.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{1de1161b-e946-49c1-9c14-0dd203037b8c}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

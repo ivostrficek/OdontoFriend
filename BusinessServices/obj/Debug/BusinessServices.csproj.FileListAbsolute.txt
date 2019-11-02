@@ -1,0 +1,16 @@
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\BusinessServices.dll.config
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\BusinessServices.dll
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\BusinessServices.pdb
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\obj\Debug\BusinessServices.csprojAssemblyReference.cache
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\obj\Debug\BusinessServices.Properties.Resources.resources
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\obj\Debug\BusinessServices.csproj.GenerateResource.cache
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\obj\Debug\BusinessServices.csproj.CoreCompileInputs.cache
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\obj\Debug\BusinessServices.dll
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\obj\Debug\BusinessServices.pdb
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\DataAccessService.dll
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\Entities.dll
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\DataAccessService.pdb
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\DataAccessService.dll.config
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\Entities.pdb
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\bin\Debug\Entities.dll.config
+C:\Users\istrficek\Documents\OdontoFriend\BusinessServices\obj\Debug\BusinessServices.csproj.CopyComplete

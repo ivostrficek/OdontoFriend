@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdontoFriend", "OdontoFriend\OdontoFriend.csproj", "{32254A51-76C1-466E-9808-FC03AF12E799}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{FFD23667-EC3E-4A24-8324-CDBD457832FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{464CEA4B-31F0-4A96-BBCF-F0DE4C40B06E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{9A96C2DF-4CA1-489E-A783-B4F863790283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{1DE1161B-E946-49C1-9C14-0DD203037B8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessServices", "BusinessServices\BusinessServices.csproj", "{02C95792-3C6B-421C-B833-4907113F57C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessService", "DataAccessService\DataAccessService.csproj", "{3A880FB5-F5F8-4050-8374-C2F0366E9A3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32254A51-76C1-466E-9808-FC03AF12E799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32254A51-76C1-466E-9808-FC03AF12E799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32254A51-76C1-466E-9808-FC03AF12E799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32254A51-76C1-466E-9808-FC03AF12E799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE1161B-E946-49C1-9C14-0DD203037B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE1161B-E946-49C1-9C14-0DD203037B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE1161B-E946-49C1-9C14-0DD203037B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE1161B-E946-49C1-9C14-0DD203037B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C95792-3C6B-421C-B833-4907113F57C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C95792-3C6B-421C-B833-4907113F57C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C95792-3C6B-421C-B833-4907113F57C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C95792-3C6B-421C-B833-4907113F57C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A880FB5-F5F8-4050-8374-C2F0366E9A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A880FB5-F5F8-4050-8374-C2F0366E9A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A880FB5-F5F8-4050-8374-C2F0366E9A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A880FB5-F5F8-4050-8374-C2F0366E9A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DE1161B-E946-49C1-9C14-0DD203037B8C} = {FFD23667-EC3E-4A24-8324-CDBD457832FC}
+		{02C95792-3C6B-421C-B833-4907113F57C0} = {464CEA4B-31F0-4A96-BBCF-F0DE4C40B06E}
+		{3A880FB5-F5F8-4050-8374-C2F0366E9A3D} = {9A96C2DF-4CA1-489E-A783-B4F863790283}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {194A343A-774F-4E42-A8C4-62485725B17C}
+	EndGlobalSection
+EndGlobal
