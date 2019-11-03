@@ -14,8 +14,10 @@ C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\BusinessService
 C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\BusinessServices.dll.config
 C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\Entities.pdb
 C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\Entities.dll.config
-C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\obj\Debug\OdontoFriend.frmPrincipal.resources
 C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\obj\Debug\OdontoFriend.csproj.CopyComplete
 C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\DataAccessService.dll
 C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\DataAccessService.pdb
 C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\DataAccessService.dll.config
+C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\bin\Debug\MetroSet UI.dll
+C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\obj\Debug\OdontoFriend.frmPrincipal1.resources
+C:\Users\istrficek\Documents\OdontoFriend\OdontoFriend\obj\Debug\OdontoFriend.frmDatos.resources
