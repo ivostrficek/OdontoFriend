@@ -56,5 +56,12 @@ namespace BusinessServices
 
             return dataAccess.ObtenerContactoEmergencia(idPaciente);
         }
+
+        public List<Plan> GetPlanes(int idObraSocial)
+        {
+            ConsultorioDataAccessService dataAccess = new ConsultorioDataAccessService();
+
+            return dataAccess.GetPlanes(idObraSocial);
+        }
     }
 }

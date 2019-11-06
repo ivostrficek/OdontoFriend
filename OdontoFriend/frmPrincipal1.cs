@@ -58,7 +58,8 @@ namespace OdontoFriend
                 newItem.SubItems.Add(p.Domicilio);
                 newItem.SubItems.Add(missingData ? "Faltan datos" : "");
                 newItem.SubItems.Add(p.IdPaciente.ToString());
-                newItem.BackColor = missingData ? Color.Salmon : Color.LightGreen;
+                newItem.BackColor = missingData ? Color.Salmon : Color.FromArgb(35, 147, 195);
+                newItem.ForeColor = missingData ? Color.Black : Color.White;
                 lvPacientes.Items.Add(newItem);
             }
 
@@ -86,7 +87,7 @@ namespace OdontoFriend
 
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
-            frmDatosPaciente frm = new frmDatosPaciente(false, null);
+            frmDatos frm = new frmDatos(false, null);
             var result = frm.ShowDialog();
             if (result == DialogResult.OK)
                 recargarLista(txtFiltro.Text);
@@ -99,7 +100,7 @@ namespace OdontoFriend
 
         private void editarPaciente(Paciente paciente)
         {
-            frmDatosPaciente frm = new frmDatosPaciente(true, paciente);
+            frmDatos frm = new frmDatos(true, paciente);
             var result = frm.ShowDialog();
             if (result == DialogResult.OK)
                 recargarLista(txtFiltro.Text);
@@ -166,10 +167,16 @@ namespace OdontoFriend
             }
         }
 
-        private void metroSetButton1_Click(object sender, EventArgs e)
+        private void cmdNuevaObraSocial_Click(object sender, EventArgs e)
         {
-            frmDatos frm = new frmDatos();
-            frm.ShowDialog();
+            frmObraSocial form = new frmObraSocial();
+            form.ShowDialog();
+        }
+
+        private void cmdEditarObraSocial_Click(object sender, EventArgs e)
+        {
+            frmObraSocial form = new frmObraSocial(true);
+            form.ShowDialog();
         }
     }
 }

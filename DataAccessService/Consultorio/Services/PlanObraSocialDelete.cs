@@ -20,28 +20,28 @@ namespace DataAccessService.Consultorio
     {
 
         /// <summary>
-        /// Builds the command object for PacienteDelete method.
+        /// Builds the command object for PlanObraSocialDelete method.
         /// </summary>
         /// <param name="cnn">The connection that will execute the procedure.</param>
-        /// <param name="input">PacienteDeleteInput instance for loading parameter values.</param>
+        /// <param name="input">PlanObraSocialDeleteInput instance for loading parameter values.</param>
         /// <returns>SqlCommand ready for execution.</returns>
-        private SqlCommand GetPacienteDeleteCommand(SqlConnection cnn, IPacienteDeleteInput input)
+        private SqlCommand GetPlanObraSocialDeleteCommand(SqlConnection cnn, IPlanObraSocialDeleteInput input)
         {
             SqlCommand result = new SqlCommand()
             {
                 CommandType = CommandType.StoredProcedure,
-                CommandText = "dbo.PacienteDelete",
+                CommandText = "dbo.PlanObraSocialDelete",
                 Connection = cnn
             };
 
             result.Parameters.Add(new SqlParameter()
             {
-                ParameterName = "@IdPaciente",
+                ParameterName = "@IdPlanObraSocial",
                 Direction = ParameterDirection.Input,
                 SqlDbType = SqlDbType.Int,
                 Scale = 0,
                 Precision = 10,
-				Value = input.IdPaciente
+				Value = input.IdPlanObraSocial
             });
 
             result.Parameters.Add(new SqlParameter()
@@ -56,38 +56,38 @@ namespace DataAccessService.Consultorio
 
             return result;
         }
-        private void SetPacienteDeleteCommandOutputs(SqlCommand cmd, PacienteDeleteOutput output)
+        private void SetPlanObraSocialDeleteCommandOutputs(SqlCommand cmd, PlanObraSocialDeleteOutput output)
         {
             if(cmd.Parameters[1].Value != DBNull.Value)
             {
-                output.ReturnValue = (PacienteDeleteOutput.Returns)cmd.Parameters[1].Value;
+                output.ReturnValue = (PlanObraSocialDeleteOutput.Returns)cmd.Parameters[1].Value;
             }
         }
-        private void PacienteDeleteCommand(SqlCommand cmd, PacienteDeleteOutput output)
+        private void PlanObraSocialDeleteCommand(SqlCommand cmd, PlanObraSocialDeleteOutput output)
         {
             cmd.ExecuteNonQuery();
 		
-            SetPacienteDeleteCommandOutputs(cmd, output);
+            SetPlanObraSocialDeleteCommandOutputs(cmd, output);
 		}
 
         /// <summary>
-        /// Deletes single row from dbo.Paciente table by identity column.
-        /// SQL+ Routine: dbo.PacienteDelete - Authored by IStrficek
+        /// Deletes single row from dbo.PlanObraSocial table by identity column.
+        /// SQL+ Routine: dbo.PlanObraSocialDelete - Authored by Ivo Strficek
         /// </summary>
-        public PacienteDeleteOutput PacienteDelete(IPacienteDeleteInput input)
+        public PlanObraSocialDeleteOutput PlanObraSocialDelete(IPlanObraSocialDeleteInput input)
         {
             if (!input.IsValid())
             {
-		        throw new ArgumentException("PacienteDeleteInput fails validation - use the PacienteDeleteInput.IsValid() method prior to passing the input argument to the PacienteDelete method.", "input");
+		        throw new ArgumentException("PlanObraSocialDeleteInput fails validation - use the PlanObraSocialDeleteInput.IsValid() method prior to passing the input argument to the PlanObraSocialDelete method.", "input");
             }
 			
-            PacienteDeleteOutput output = new PacienteDeleteOutput();
+            PlanObraSocialDeleteOutput output = new PlanObraSocialDeleteOutput();
 			if(sqlConnection != null)
             {
-                using (SqlCommand cmd = GetPacienteDeleteCommand(sqlConnection, input))
+                using (SqlCommand cmd = GetPlanObraSocialDeleteCommand(sqlConnection, input))
                 {
                     cmd.Transaction = sqlTransaction;
-                    PacienteDeleteCommand(cmd, output);
+                    PlanObraSocialDeleteCommand(cmd, output);
                 }
                 return output;
             }
@@ -100,10 +100,10 @@ namespace DataAccessService.Consultorio
                 try
                 {
                     using (SqlConnection cnn = new SqlConnection(connectionString))
-                    using (SqlCommand cmd = GetPacienteDeleteCommand(cnn, input))
+                    using (SqlCommand cmd = GetPlanObraSocialDeleteCommand(cnn, input))
                     {
                         cnn.Open();
-						PacienteDeleteCommand(cmd, output);
+						PlanObraSocialDeleteCommand(cmd, output);
                         cnn.Close();
                     }
 					break;

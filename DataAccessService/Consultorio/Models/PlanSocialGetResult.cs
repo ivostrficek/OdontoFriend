@@ -7,23 +7,17 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-using System;
 using System.Collections.Generic;
 namespace DataAccessService.Consultorio.Models
 {
     /// <summary>
-    /// Result object for SearchPaciente routine.
+    /// Result object for PlanSocialGet routine.
     /// </summary>
-    public class SearchPacienteResult
+    public class PlanSocialGetResult
 	{
-        public int IdPaciente { set; get; }
-        public string DNI { set; get; }
+        public int IdPlanObraSocial { set; get; }
+        public int? IdObraSocial { set; get; }
         public string Nombre { set; get; }
-        public string Apellido { set; get; }
-        public string Telefono { set; get; }
-        public DateTime? FechaNacimiento { set; get; }
-        public string Domicilio { set; get; }
-        public string Sexo { set; get; }
-        public string Localidad { set; get; }
+        public bool? Habilitado { set; get; }
     }
 }

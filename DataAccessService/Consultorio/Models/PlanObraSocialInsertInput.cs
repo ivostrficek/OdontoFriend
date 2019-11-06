@@ -14,23 +14,35 @@ using System.ComponentModel.DataAnnotations;
 namespace DataAccessService.Consultorio.Models
 {
     /// <summary>
-    /// Interface for ContactoEmergenciaByPacienteIdInput object.
+    /// Interface for PlanObraSocialInsertInput object.
     /// </summary>
-    public interface IContactoEmergenciaByPacienteIdInput : IValidInput
+    public interface IPlanObraSocialInsertInput : IValidInput
     {
-        int? IdPaciente { set; get; }
+        int? IdObraSocial { set; get; }
+        string Nombre { set; get; }
+        bool? Habilitado { set; get; }
     }
 
     /// <summary>
-    /// Input object for ContactoEmergenciaByPacienteId method.
+    /// Input object for PlanObraSocialInsert method.
     /// </summary>
-    public class ContactoEmergenciaByPacienteIdInput : ValidInput, IContactoEmergenciaByPacienteIdInput
+    public class PlanObraSocialInsertInput : ValidInput, IPlanObraSocialInsertInput
     {
         /// <summary>
-        /// IdPaciente
+        /// IdObraSocial
         /// </summary>
-        [Required(AllowEmptyStrings = false)]
-        public int? IdPaciente { set; get; }
+        public int? IdObraSocial { set; get; }
+
+        /// <summary>
+        /// Nombre
+        /// </summary>
+        [MaxLength(50)]
+        public string Nombre { set; get; }
+
+        /// <summary>
+        /// Habilitado
+        /// </summary>
+        public bool? Habilitado { set; get; }
 
     }
 } 

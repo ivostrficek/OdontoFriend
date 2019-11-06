@@ -52,6 +52,7 @@
     <Compile Include="ContactoEmergencia.cs" />
     <Compile Include="ObraSocial.cs" />
     <Compile Include="Paciente.cs" />
+    <Compile Include="Plan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

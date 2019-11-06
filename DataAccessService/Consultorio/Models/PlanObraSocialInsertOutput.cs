@@ -7,23 +7,27 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
+
 using System;
+using System.Data.SqlClient;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace DataAccessService.Consultorio.Models
 {
     /// <summary>
-    /// Result object for SearchPaciente routine.
+    /// Output object for PlanObraSocialInsert method.
     /// </summary>
-    public class SearchPacienteResult
-	{
-        public int IdPaciente { set; get; }
-        public string DNI { set; get; }
-        public string Nombre { set; get; }
-        public string Apellido { set; get; }
-        public string Telefono { set; get; }
-        public DateTime? FechaNacimiento { set; get; }
-        public string Domicilio { set; get; }
-        public string Sexo { set; get; }
-        public string Localidad { set; get; }
+    public class PlanObraSocialInsertOutput
+    {
+        public enum Returns
+        {
+             Ok = 1
+        }
+
+		public int? IdPlanObraSocial { set; get; }
+
+		public Returns ReturnValue { set; get; }
+
     }
 }

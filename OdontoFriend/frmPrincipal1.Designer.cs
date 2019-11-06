@@ -37,9 +37,10 @@
             this.cmdEliminar = new MetroSet_UI.Controls.MetroSetButton();
             this.cmdNuevo = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetTabPage2 = new MetroSet_UI.Child.MetroSetTabPage();
+            this.cmdNuevaObraSocial = new MetroSet_UI.Controls.MetroSetButton();
+            this.cmdEditarObraSocial = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetSwitch1 = new MetroSet_UI.Controls.MetroSetSwitch();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
-            this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.tbPrincipal.SuspendLayout();
             this.metroSetTabPage1.SuspendLayout();
             this.metroSetTabPage2.SuspendLayout();
@@ -54,7 +55,7 @@
             this.tbPrincipal.AnimateTime = 200;
             this.tbPrincipal.Controls.Add(this.metroSetTabPage1);
             this.tbPrincipal.Controls.Add(this.metroSetTabPage2);
-            this.tbPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tbPrincipal.Cursor = System.Windows.Forms.Cursors.Default;
             this.tbPrincipal.ItemSize = new System.Drawing.Size(100, 38);
             this.tbPrincipal.Location = new System.Drawing.Point(0, 80);
             this.tbPrincipal.Name = "tbPrincipal";
@@ -195,6 +196,8 @@
             // metroSetTabPage2
             // 
             this.metroSetTabPage2.BaseColor = System.Drawing.Color.White;
+            this.metroSetTabPage2.Controls.Add(this.cmdNuevaObraSocial);
+            this.metroSetTabPage2.Controls.Add(this.cmdEditarObraSocial);
             this.metroSetTabPage2.Controls.Add(this.metroSetSwitch1);
             this.metroSetTabPage2.ImageIndex = 0;
             this.metroSetTabPage2.ImageKey = null;
@@ -209,6 +212,58 @@
             this.metroSetTabPage2.ThemeName = "MetroLite";
             this.metroSetTabPage2.ToolTipText = null;
             // 
+            // cmdNuevaObraSocial
+            // 
+            this.cmdNuevaObraSocial.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdNuevaObraSocial.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdNuevaObraSocial.DisabledForeColor = System.Drawing.Color.Gray;
+            this.cmdNuevaObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmdNuevaObraSocial.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.cmdNuevaObraSocial.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.cmdNuevaObraSocial.HoverTextColor = System.Drawing.Color.White;
+            this.cmdNuevaObraSocial.Location = new System.Drawing.Point(136, 14);
+            this.cmdNuevaObraSocial.Name = "cmdNuevaObraSocial";
+            this.cmdNuevaObraSocial.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdNuevaObraSocial.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdNuevaObraSocial.NormalTextColor = System.Drawing.Color.White;
+            this.cmdNuevaObraSocial.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.cmdNuevaObraSocial.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.cmdNuevaObraSocial.PressTextColor = System.Drawing.Color.White;
+            this.cmdNuevaObraSocial.Size = new System.Drawing.Size(127, 54);
+            this.cmdNuevaObraSocial.Style = MetroSet_UI.Design.Style.Light;
+            this.cmdNuevaObraSocial.StyleManager = null;
+            this.cmdNuevaObraSocial.TabIndex = 2;
+            this.cmdNuevaObraSocial.Text = "Nueva Obra Social";
+            this.cmdNuevaObraSocial.ThemeAuthor = "Narwin";
+            this.cmdNuevaObraSocial.ThemeName = "MetroLite";
+            this.cmdNuevaObraSocial.Click += new System.EventHandler(this.cmdNuevaObraSocial_Click);
+            // 
+            // cmdEditarObraSocial
+            // 
+            this.cmdEditarObraSocial.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdEditarObraSocial.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdEditarObraSocial.DisabledForeColor = System.Drawing.Color.Gray;
+            this.cmdEditarObraSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmdEditarObraSocial.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.cmdEditarObraSocial.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.cmdEditarObraSocial.HoverTextColor = System.Drawing.Color.White;
+            this.cmdEditarObraSocial.Location = new System.Drawing.Point(3, 14);
+            this.cmdEditarObraSocial.Name = "cmdEditarObraSocial";
+            this.cmdEditarObraSocial.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdEditarObraSocial.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cmdEditarObraSocial.NormalTextColor = System.Drawing.Color.White;
+            this.cmdEditarObraSocial.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.cmdEditarObraSocial.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.cmdEditarObraSocial.PressTextColor = System.Drawing.Color.White;
+            this.cmdEditarObraSocial.Size = new System.Drawing.Size(127, 54);
+            this.cmdEditarObraSocial.Style = MetroSet_UI.Design.Style.Light;
+            this.cmdEditarObraSocial.StyleManager = null;
+            this.cmdEditarObraSocial.TabIndex = 1;
+            this.cmdEditarObraSocial.Text = "Editar Obras sociales";
+            this.cmdEditarObraSocial.ThemeAuthor = "Narwin";
+            this.cmdEditarObraSocial.ThemeName = "MetroLite";
+            this.cmdEditarObraSocial.Click += new System.EventHandler(this.cmdEditarObraSocial_Click);
+            // 
             // metroSetSwitch1
             // 
             this.metroSetSwitch1.BackColor = System.Drawing.Color.Transparent;
@@ -220,7 +275,7 @@
             this.metroSetSwitch1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
             this.metroSetSwitch1.DisabledCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetSwitch1.DisabledUnCheckColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
-            this.metroSetSwitch1.Location = new System.Drawing.Point(70, 33);
+            this.metroSetSwitch1.Location = new System.Drawing.Point(3, 108);
             this.metroSetSwitch1.Name = "metroSetSwitch1";
             this.metroSetSwitch1.Size = new System.Drawing.Size(58, 22);
             this.metroSetSwitch1.Style = MetroSet_UI.Design.Style.Light;
@@ -259,44 +314,22 @@
             this.metroSetControlBox1.ThemeAuthor = null;
             this.metroSetControlBox1.ThemeName = null;
             // 
-            // metroSetButton1
-            // 
-            this.metroSetButton1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(418, 39);
-            this.metroSetButton1.Name = "metroSetButton1";
-            this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.NormalTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroSetButton1.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetButton1.StyleManager = this.styleManager;
-            this.metroSetButton1.TabIndex = 2;
-            this.metroSetButton1.Text = "metroSetButton1";
-            this.metroSetButton1.ThemeAuthor = null;
-            this.metroSetButton1.ThemeName = null;
-            this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
-            // 
             // frmPrincipal1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.tbPrincipal);
+            this.DropShadowEffect = false;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmPrincipal1";
+            this.Padding = new System.Windows.Forms.Padding(12, 90, 12, 12);
+            this.ShowLeftRect = false;
+            this.ShowTitle = false;
             this.StyleManager = this.styleManager;
-            this.Text = "OdontoFriend";
+            this.Text = "ODONTOFRIEND";
+            this.TextColor = System.Drawing.Color.White;
             this.ThemeAuthor = null;
             this.ThemeName = null;
             this.Load += new System.EventHandler(this.frmPrincipal1_Load);
@@ -322,6 +355,7 @@
         private System.Windows.Forms.TextBox txtFiltro;
         private MetroSet_UI.StyleManager styleManager;
         private MetroSet_UI.Controls.MetroSetSwitch metroSetSwitch1;
-        private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
+        private MetroSet_UI.Controls.MetroSetButton cmdNuevaObraSocial;
+        private MetroSet_UI.Controls.MetroSetButton cmdEditarObraSocial;
     }
 }

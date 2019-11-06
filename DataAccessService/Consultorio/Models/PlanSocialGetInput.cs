@@ -7,23 +7,30 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-using System;
+
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace DataAccessService.Consultorio.Models
 {
     /// <summary>
-    /// Result object for SearchPaciente routine.
+    /// Interface for PlanSocialGetInput object.
     /// </summary>
-    public class SearchPacienteResult
-	{
-        public int IdPaciente { set; get; }
-        public string DNI { set; get; }
-        public string Nombre { set; get; }
-        public string Apellido { set; get; }
-        public string Telefono { set; get; }
-        public DateTime? FechaNacimiento { set; get; }
-        public string Domicilio { set; get; }
-        public string Sexo { set; get; }
-        public string Localidad { set; get; }
+    public interface IPlanSocialGetInput : IValidInput
+    {
+        int? IdObraSocial { set; get; }
     }
-}
+
+    /// <summary>
+    /// Input object for PlanSocialGet method.
+    /// </summary>
+    public class PlanSocialGetInput : ValidInput, IPlanSocialGetInput
+    {
+        /// <summary>
+        /// IdObraSocial
+        /// </summary>
+        [Required(AllowEmptyStrings = false)]
+        public int? IdObraSocial { set; get; }
+
+    }
+} 

@@ -13,7 +13,7 @@ namespace DataAccessService
     {
         public List<Paciente> GetAllPacientes()
         {
-            Service service = new Service("Server = 127.0.0.1; Initial Catalog = Consultorio; User ID = sa; Password = !Coresec123;");
+            Service service = GetService();
             PacienteQueryOutput listaPacientes = service.PacienteQuery();
 
             if (listaPacientes.ReturnValue == PacienteQueryOutput.Returns.Ok)
@@ -36,7 +36,7 @@ namespace DataAccessService
 
         public List<ObraSocial> GetObraSocial(int idPaciente)
         {
-            Service service = new Service("Server = 127.0.0.1; Initial Catalog = Consultorio; User ID = sa; Password = !Coresec123;");
+            Service service = GetService();
             GetObraSocialCompleteInput input = new GetObraSocialCompleteInput() { idPaciente = idPaciente };
             GetObraSocialCompleteOutput listaObrasSociales = service.GetObraSocialComplete(input);
 
@@ -57,9 +57,29 @@ namespace DataAccessService
                 return new List<ObraSocial>();
         }
 
+        public List<Plan> GetPlanes(int idObraSocial)
+        {
+            var service = GetService();
+
+            var input = new PlanSocialGetInput() { IdObraSocial = idObraSocial };
+            var lista = service.PlanSocialGet(input);
+
+            if (lista.ReturnValue == PlanSocialGetOutput.Returns.Ok)
+                return (from obraSocial in lista.ResultData
+                        select new Plan()
+                        {
+                            IdObraSocial = obraSocial.IdObraSocial.Value,
+                            Nombre = obraSocial.Nombre,
+                            Habilitado = obraSocial.Habilitado.Value,
+                            IdPlan = obraSocial.IdPlanObraSocial
+                        }).ToList();
+            else
+                return new List<Plan>();
+        }
+
         public ContactoEmergencia ObtenerContactoEmergencia(int idPaciente)
         {
-            Service service = new Service("Server = 127.0.0.1; Initial Catalog = Consultorio; User ID = sa; Password = !Coresec123;");
+            Service service = GetService();
             ContactoEmergenciaByPacienteIdInput input = new ContactoEmergenciaByPacienteIdInput() { IdPaciente = idPaciente };
             ContactoEmergenciaByPacienteIdOutput contacto = service.ContactoEmergenciaByPacienteId(input);
 
@@ -71,7 +91,7 @@ namespace DataAccessService
 
         public List<Paciente> GetAllPacientes(string filtro)
         {
-            Service service = new Service("Server = 127.0.0.1; Initial Catalog = Consultorio; User ID = sa; Password = !Coresec123;");
+            Service service = GetService();
             SearchPacienteInput input = new SearchPacienteInput() { Searchtext = filtro };
             SearchPacienteOutput listaPacientes = service.SearchPaciente(input);
 
@@ -124,7 +144,7 @@ namespace DataAccessService
 
         public List<ObraSocial> GetAllObraSocial()
         {
-            Service service = new Service("Server = 127.0.0.1; Initial Catalog = Consultorio; User ID = sa; Password = !Coresec123;");
+            Service service = GetService();
             GetAllObraSocialOutput listaIbrasSociales = service.GetAllObraSocial();
 
             if (listaIbrasSociales.ReturnValue == GetAllObraSocialOutput.Returns.Ok)
@@ -141,7 +161,7 @@ namespace DataAccessService
 
         public int DeletePaciente(Paciente paciente)
         {
-            Service service = new Service("Server = 127.0.0.1; Initial Catalog = Consultorio; User ID = sa; Password = !Coresec123;");
+            Service service = GetService();
             PacienteDeleteInput input = new PacienteDeleteInput() { IdPaciente = paciente.IdPaciente };
             PacienteDeleteOutput resultado = service.PacienteDelete(input);
 
@@ -149,6 +169,11 @@ namespace DataAccessService
                 return 0;
             else
                 return 1;
+        }
+
+        private Service GetService()
+        {
+            return new Context().GetService();
         }
     }
 }

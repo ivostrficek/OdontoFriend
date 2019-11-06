@@ -55,11 +55,11 @@
     <Compile Include="frmDatos.Designer.cs">
       <DependentUpon>frmDatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDatosPaciente.cs">
+    <Compile Include="frmObraSocial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDatosPaciente.Designer.cs">
-      <DependentUpon>frmDatosPaciente.cs</DependentUpon>
+    <Compile Include="frmObraSocial.Designer.cs">
+      <DependentUpon>frmObraSocial.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal1.cs">
       <SubType>Form</SubType>
@@ -72,8 +72,8 @@
     <EmbeddedResource Include="frmDatos.resx">
       <DependentUpon>frmDatos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDatosPaciente.resx">
-      <DependentUpon>frmDatosPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="frmObraSocial.resx">
+      <DependentUpon>frmObraSocial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal1.resx">
       <DependentUpon>frmPrincipal1.cs</DependentUpon>

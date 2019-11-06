@@ -83,6 +83,15 @@
     <Compile Include="Consultorio\Models\PacienteQueryResult.cs" />
     <Compile Include="Consultorio\Models\PacienteUpdateInput.cs" />
     <Compile Include="Consultorio\Models\PacienteUpdateOutput.cs" />
+    <Compile Include="Consultorio\Models\PlanObraSocialDeleteInput.cs" />
+    <Compile Include="Consultorio\Models\PlanObraSocialDeleteOutput.cs" />
+    <Compile Include="Consultorio\Models\PlanObraSocialInsertInput.cs" />
+    <Compile Include="Consultorio\Models\PlanObraSocialInsertOutput.cs" />
+    <Compile Include="Consultorio\Models\PlanObraSocialUpdateInput.cs" />
+    <Compile Include="Consultorio\Models\PlanObraSocialUpdateOutput.cs" />
+    <Compile Include="Consultorio\Models\PlanSocialGetInput.cs" />
+    <Compile Include="Consultorio\Models\PlanSocialGetOutput.cs" />
+    <Compile Include="Consultorio\Models\PlanSocialGetResult.cs" />
     <Compile Include="Consultorio\Models\SearchPacienteInput.cs" />
     <Compile Include="Consultorio\Models\SearchPacienteOutput.cs" />
     <Compile Include="Consultorio\Models\SearchPacienteResult.cs" />
@@ -98,8 +107,13 @@
     <Compile Include="Consultorio\Services\PacienteInsert.cs" />
     <Compile Include="Consultorio\Services\PacienteQuery.cs" />
     <Compile Include="Consultorio\Services\PacienteUpdate.cs" />
+    <Compile Include="Consultorio\Services\PlanObraSocialDelete.cs" />
+    <Compile Include="Consultorio\Services\PlanObraSocialInsert.cs" />
+    <Compile Include="Consultorio\Services\PlanObraSocialUpdate.cs" />
+    <Compile Include="Consultorio\Services\PlanSocialGet.cs" />
     <Compile Include="Consultorio\Services\SearchPaciente.cs" />
     <Compile Include="Consultorio\Services\ServiceBase.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

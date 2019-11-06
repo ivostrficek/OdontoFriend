@@ -14,44 +14,42 @@ using System.ComponentModel.DataAnnotations;
 namespace DataAccessService.Consultorio.Models
 {
     /// <summary>
-    /// Interface for ContactoEmergenciaUpdateInput object.
+    /// Interface for PlanObraSocialUpdateInput object.
     /// </summary>
-    public interface IContactoEmergenciaUpdateInput : IValidInput
+    public interface IPlanObraSocialUpdateInput : IValidInput
     {
-        int? IdContactoEmergencia { set; get; }
+        int? IdPlanObraSocial { set; get; }
+        int? IdObraSocial { set; get; }
         string Nombre { set; get; }
-        string Telefono { set; get; }
-        string Parentesco { set; get; }
+        bool? Habilitado { set; get; }
     }
 
     /// <summary>
-    /// Input object for ContactoEmergenciaUpdate method.
+    /// Input object for PlanObraSocialUpdate method.
     /// </summary>
-    public class ContactoEmergenciaUpdateInput : ValidInput, IContactoEmergenciaUpdateInput
+    public class PlanObraSocialUpdateInput : ValidInput, IPlanObraSocialUpdateInput
     {
         /// <summary>
-        /// IdContactoEmergencia
+        /// IdPlanObraSocial
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        public int? IdContactoEmergencia { set; get; }
+        public int? IdPlanObraSocial { set; get; }
+
+        /// <summary>
+        /// IdObraSocial
+        /// </summary>
+        public int? IdObraSocial { set; get; }
 
         /// <summary>
         /// Nombre
         /// </summary>
-        [MaxLength(100)]
+        [MaxLength(50)]
         public string Nombre { set; get; }
 
         /// <summary>
-        /// Telefono
+        /// Habilitado
         /// </summary>
-        [MaxLength(50)]
-        public string Telefono { set; get; }
-
-        /// <summary>
-        /// Parentesco
-        /// </summary>
-        [MaxLength(50)]
-        public string Parentesco { set; get; }
+        public bool? Habilitado { set; get; }
 
     }
 } 
